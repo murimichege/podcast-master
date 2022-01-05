@@ -4,6 +4,7 @@ import {AUTH, LOGOUT} from '../actiontypes'
     switch(action.type){
         case AUTH:
         console.log(action?.data)
+        localStorage.setItem('profile', JSON.stringify({...action?.data}) )
         return state;
 
         default:
