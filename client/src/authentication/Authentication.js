@@ -1,7 +1,10 @@
 import React, {useState} from 'react'
 import { GoogleLogin } from 'react-google-login';
+import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button';
 import {useDispatch} from 'react-redux'
+import { useNavigate } from "react-router-dom";
+import Divider from '@mui/material/Divider';
 
 function Authentication() {
 
@@ -18,9 +21,10 @@ const initialstate = {
 
 // hooks
 const [form, setForm] = useState(initialstate);
-const [isSignUp, setisSignUp]= useState(true);
- const dispatch = useDispatch();
+const [isSignUp, setisSignUp]= useState(false);
 
+const dispatch = useDispatch();
+const navigate = useNavigate();
 
 
 const handleChange = (e) => {
@@ -34,9 +38,10 @@ const token = res?.tokenId;
 
 try {
     dispatch({type: 'AUTH', data : {result, token}})
+    navigate('/Dashboard')
     
 } catch (error) {
-    
+    console.log(error)
 }
 
 }
@@ -52,7 +57,7 @@ const switchMode = () => {
 const handleSubmit = (e) => {
     e.preventDefault();
 
-    const {fullName, userName, Email, PhoneNumber, PassWord, ConfirmPassWord, avatarURL} = form;
+   // const {fullName, userName, Email, PhoneNumber, PassWord, ConfirmPassWord, avatarURL} = form;
     
 }
     return (
@@ -61,11 +66,11 @@ const handleSubmit = (e) => {
                 <form onSubmit = {handleSubmit} className = 'form'>
                       { isSignUp && (
                           <div className='auth-form-field'>
-                          <input
+                          <TextField
                           name="Full Name"
                           type="text"
-                          placeholder="Full Name"
-                          className =  "form-input"
+                          label="Full Name"
+                          className = "form-input"
                           onChange={handleChange}
                           required
                           />
@@ -73,10 +78,10 @@ const handleSubmit = (e) => {
                       }  
                         
                         { isSignUp && (<div className='auth-form-field'>
-                            <input
+                            <TextField
                             name="User Name"
                             type="text"
-                            placeholder="User Name"
+                            label="User Name"
                             className =  "form-input"
                             onChange={handleChange}
                             required
@@ -84,20 +89,20 @@ const handleSubmit = (e) => {
                         </div>)
                   }
                         <div className='auth-form-field'>
-                            <input
+                            <TextField
                             name="Email"
                             type="text"
-                            placeholder="Email"
-                            className =  "form-input"
+                            label="Email"
+                            className ="form-input"
                             onChange={handleChange}
                             required
                             />
                         </div>
                         <div className = 'auth-form-field'>
-                                <input
+                                <TextField
                                 name="Password"
                                 type="password"
-                                placeholder="Password"
+                                label="Password"
                                 className =  "form-input"
                                 onChange={handleChange}
                                 required
@@ -105,19 +110,19 @@ const handleSubmit = (e) => {
                         </div> 
                         {isSignUp && (
                             <div className = 'auth-form-field'>
-                                <input
+                                <TextField
                                 name="Confirm Password"
                                 type="password"
-                                placeholder="Confirm Password"
+                                label="Confirm Password"
                                 className =  "form-input"
                                 onChange={handleChange}
                                 required
                                 />
                         </div> )
 
-                        }      
-                </form>
-                <div className='form-auth'>
+                        } 
+                    <button className = "form-input-submit">{isSignUp ? "SignIn" : "SignUp"}</button>
+                    <div className='form-auth'>
                             <p>
                             {
                                 isSignUp
@@ -130,17 +135,18 @@ const handleSubmit = (e) => {
                             </p>
 
                         </div>
+                        <Divider className = "sign-in">Or Sign In With</Divider>
+
                         <div className='form-submit'>
-                          <button>{isSignUp ? "SignIn" : "SignUp"}</button>
                       </div>
 
                       <div className="footer-auth-buttons">
-                    <p className='footer-p'>Login with</p>
                     <GoogleLogin
                     clientId = "824831298570-tc2idrmgrfhpgkc0qlu2s06ngk3r7r75.apps.googleusercontent.com"
                     render = {(renderProps) => (
                         <Button color= 'primary' 
-                        fullwidth 
+                        fullwidth
+                         
                         onClick = {renderProps.onClick} 
                         disabled = {renderProps.disabled} 
                         //startIcon = {}
@@ -158,6 +164,8 @@ const handleSubmit = (e) => {
 
                     <span className="span"> Google</span>
                 </div>
+                
+                </form>
                 
             </div>
            
