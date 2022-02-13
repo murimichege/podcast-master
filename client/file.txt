@@ -1,0 +1,9 @@
+ <div className = 'header-left-content'>
+                <Link> NEW RELEASES</Link>
+                <Link> SHUFFLE PLAY</Link>
+                <Link> LIVE PODCASTS</Link>
+            </div>
+            <div className = 'header-right-content'>
+                
+            </div>
+                     

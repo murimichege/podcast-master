@@ -1,12 +1,12 @@
 import React from 'react'
 import './App.css';
-import Main from './components/routing/main'
 import {Provider} from 'react-redux'
 import store from './redux/store'
+import Approutes from './router/Routes'
 function App() {
   return (
     <Provider store={store}>
-          <Main/>
+          <Approutes/>
     </Provider>
  
   );

@@ -7,13 +7,14 @@ import PieChartIcon from '@mui/icons-material/PieChart';
 import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-
-
+import Dashboard from '../pages/menu/Dashboard';
+import Trending from '../pages/menu/Trending';
 
 
 
 export const menuroutes = [
     {
+        
         name: "Discover",
         route:"/Discover",
         icon: <ExploreIcon/>
@@ -23,22 +24,22 @@ export const menuroutes = [
         name: "Trending",
         route:"/Trending",
         icon: <InsertChartIcon/>
+       
     },
     {
         name: "Trending",
         route:"/Discover",
         icon: <ClassIcon/>
+        
     },
     {
         name: "Trending",
         route:"/Discover",
-        icon: <LibraryMusicIcon/>
-    },
+        icon: <LibraryMusicIcon/>    },
     {
         name: "Trending",
         route:"/Discover",
-        icon: <KeyboardVoiceIcon/>
-    }
+        icon: <KeyboardVoiceIcon/>    }
     
     
 ]
@@ -82,5 +83,23 @@ export const customizemenu = [
         name: "Settings",
         route:"/Discover",
         icon: <PlaylistAddIcon/>
+    }
+]
+
+
+export const headeritems = [
+    {
+        title: "NEW RELEASES",
+        route: '/new-releases'
+
+    },
+    {
+        title: "SHUFFLE PLAY",
+        route: '/Shuffle'
+
+    },
+    {
+        title: "LIVE PODCASTS",
+        route: "/Live-Podcasts"
     }
 ]

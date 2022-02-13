@@ -1,0 +1,23 @@
+.container{
+    flex-direction: row;
+    margin-left: 40px;
+margin-top: -70px;
+
+}
+.search-header{
+    margin-top: 80px;
+    color: white;
+}
+.top-podcasters{
+    margin-top: -200px;
+}
+.top-podcaster-header{
+    color: white;
+}
+.top-podcaster-avatars-item{
+    margin-top: 15px;
+
+}
+.top-podcaster-content{
+    margin-top: -27px;
+}
