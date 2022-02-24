@@ -1,8 +1,7 @@
 .container{
-    flex-direction: row;
     margin-left: 40px;
 margin-top: -70px;
-
+position: sticky
 }
 .search-header{
     margin-top: 80px;

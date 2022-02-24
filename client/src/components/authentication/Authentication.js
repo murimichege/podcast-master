@@ -168,6 +168,7 @@ const handleSubmit = (e) => {
             </div>
            
             <div className = 'form-right-container'>
+                <img src={background1} alt='background image'/>
 
             </div>
         </div>

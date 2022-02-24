@@ -1,0 +1,15 @@
+.recent-container{
+    max-width: 150px;
+    border-radius: 20px;
+    padding: 24px;
+    margin: auto; 
+       height: 80px;
+       display: inline-block;
+    color: white;
+}
+.recent-thumbnail{
+    border-radius: 20px;
+    display: block;
+    height: 120px;
+    width: 120px;
+}

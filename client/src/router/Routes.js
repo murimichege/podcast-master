@@ -1,6 +1,6 @@
 import React from 'react'
-import Dashboard from '../components/pages/menu/Dashboard'
-import Trending from '../components/pages/menu/Trending'
+import Dashboard from '../components/pages/menu/Dashboard/Dashboard'
+import Trending from '../components/pages/library/Trending/Trending'
 import Speaker from '../components/pages/menu/speaker'
 import Genre from '../components/pages/menu/Genre'
 import {Route, BrowserRouter, Routes} from 'react-router-dom'

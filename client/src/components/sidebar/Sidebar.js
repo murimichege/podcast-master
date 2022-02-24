@@ -5,7 +5,7 @@ import { librarymenu } from './sideitems'
 import { customizemenu } from './sideitems'
 import {Link} from 'react-router-dom'
 import Divider from '@mui/material/Divider';
-
+import './sidebar.css'
 
 
 function Sidebar(props) {
@@ -55,27 +55,7 @@ function Sidebar(props) {
             }
             <Divider />
              </div>
-            
-            <div>
-            <h4 className='side-nav-heading'>CUSTOMIZE</h4>
-
-            {
-                customizemenu.map((item, index) =>(
-                    <Link to = {item.route} key={index}>
-                        <Sidebaritem
-                        title={item.name}
-                        icon={item.icon}
-                        active={index === activeitem}
-                        
-                        
-                        
-                        />
-                    </Link>
-                ))
-
-
-            }
-            </div>
+         
         </div>
     )
 }

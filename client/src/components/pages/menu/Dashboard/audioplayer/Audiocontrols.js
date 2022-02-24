@@ -1,6 +1,6 @@
 import React from 'react'
 
-function auth() {
+function Audiocontrols({}) {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function auth() {
     )
 }
 
-export default auth
+export default Audiocontrols

@@ -4,6 +4,7 @@
     import {headeritems} from '../sidebar/sideitems'
     import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded'; 
     import Avatar from '@mui/material/Avatar';
+    import './header.css'
 
     function Header() {
 

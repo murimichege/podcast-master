@@ -1,0 +1,39 @@
+.header{
+    padding: 30px;
+    background-color: #15191f;
+    height: 10px;
+    overflow: hidden;
+  }
+  .header-section{
+    align-items: center;
+    margin: 5px;
+    position: absolute;
+    flex-direction: row;
+    display: flex;
+    margin-left: 15rem;
+    margin-top: -28px;
+  }
+  
+  .left-header-section-item {
+    margin: 30px;
+    color: #86888c;
+  }
+  
+  .header-section a{
+    text-decoration: none;
+  
+  }
+  .right-header-section{
+    flex-direction: row;
+    display: flex;
+    flex: 5 ;
+    position: relative;
+    margin-left: 35rem;
+  
+  }
+  .header-section-icon-item{
+    cursor: pointer;
+    margin: 2vh;
+  
+  }
+  

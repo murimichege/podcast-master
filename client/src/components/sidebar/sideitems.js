@@ -7,8 +7,8 @@ import PieChartIcon from '@mui/icons-material/PieChart';
 import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import Dashboard from '../pages/menu/Dashboard';
-import Trending from '../pages/menu/Trending';
+import Dashboard from '../pages/menu/Dashboard/Dashboard';
+import Trending from '../pages/library/Trending/Trending';
 
 
 
